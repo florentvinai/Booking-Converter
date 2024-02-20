@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<!-----------------------------------------------------------!-->
+<!-- Florent VINAI IUT 2eme Annee Gr 3-----------------------!-->
+<!-- S3 M2105 - Web Dev Dynamique ---------------------------!-->
+<!-- Année 2019/2020  ---------------------------------------!-->
+<!---TP1  Exercice 3 Feuille formulaire pour ----------------!-->
+<!---recupere les information d'une reservation ho-----------!-->
+<!-----------------------------------------------------------!-->
+
+<html lang="fr">
+	<head> <!-- Declaration du contenu de la spucture HEAD !-->
+		<title>Formulaire en HTML 5.0</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes " />
+		<link rel="stylesheet" type ="text/css" href="stylesform2new.css">
+		<script src="javascriptreservation2.js" type="text/Javascript" ></script>
+		<!--<link rel="stylesheet" type ="text/css" href="responsive.css">!-->
+	</head>
+
+ <body onload="loadedPage();">
+
+	<!--<h2>Formulaire en HTML 5.0</h2>!-->
+	<section> <!-- Declaration du contenu de la spucture SECTION HTML5  !-->
+	<form name="form1" autocomplete="on" onsubmit="return confirm('Envoyer l\'email ?');" action="mailto:florent1312011@gmail.com?Subject=R&eacute;servation">
+		<fieldset>
+		<legend>R&eacute;servation H&ocirc;tel R&T **</legend>
+
+				<div class="tableau" border="0">
+				  <p> <!-- nouvelle zone pour l'image !-->
+				    <figure><img src="rt.png" alt="R&T" width="120" height="auto"></figure>
+				  </p>
+
+				  <p> <!-- nouvelle zone pour disposer de 2 spans droite & gauche pour texte et Input  !-->
+				    <span class="left"><label>Nom </label></span>
+					<span class="right"><input type="text" onblur="checkField(this);" name="nom" placeholder="Nom" required pattern="[A-Za-z]+" ><p class ="checkfield" id="nom"> </p></span>
+				  </p>
+				  <p> <!-- nouvelle zone pour disposer de 2 spans droite & gauche pour texte et Input !-->
+				    <span class="left"><label>Pr&eacute;nom </label></span>
+					<span class="right"><input type="text" onblur="checkField(this);" name="prenom" placeholder="Pr&eacute;nom" required pattern="[A-Za-z]+"></input><p class ="checkfield" id="prenom"></p></span>
+				  </p>
+				  <p> <!-- nouvelle zone pour disposer de 2 spans droite & gauche  pour texte et Input!-->
+				    <span class="left"><label>Email </label></span>
+				    <span class="right"><input type="email" onblur="checkField(this);" name="emailone" placeholder="Email" required pattern=".+@gmail.com"/><p class ="checkfield" id="emailone"></p></span>
+				  </p>
+				  <p> <!-- nouvelle zone pour disposer de 2 spans droite & gauche  pour texte et Input!-->
+				    <span class="left"><label>Confirmer l'eMail </label></span>
+				    <span class="right"><input type="email" name="emailtwo" placeholder="Confirmer l'eMail" required pattern=".+@gmail.com" onBlur="return CheckMail(this);" /><p class ="checkfield" id="emailtwo"></p></span>
+				  </p>
+				  <p> <!-- nouvelle zone pour disposer de 2 spans droite & gauche  pour texte Label et Value + Conpol via Pattern !-->
+				    <span class="left"><label>T&eacute;l&eacute;phone </label></span>
+				    <span class="right"><input type="tel" onblur="checkField(this);" name="phone" placeholder="T&eacute;l&eacute;phone" required pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" /><p class ="checkfield" id="phone"></p></span>
+				  </p>
+				  <p> <!-- nouvelle zone pour disposer de 2 spans droite & gauche  pour texte  Label et Value + Conpol via Pattern !-->
+				    
+					<span class="left"><label>Date arriv&eacute;e </label></span>
+				    <span class="right"><input type="date" onblur="checkField(this);" name="date1" value="2019-09-01" required pattern="\d{1,2}/\d{1,2}/\d{4}" /><p class ="checkfield" id="date1"></p></span>
+				  </p>
+				  <p> <!-- nouvelle zone pour disposer de 2 spans droite & gauche  pour texte et choix de date!-->
+				    <span class="left"><label>Date d&eacute;part </label></span>
+				    <span class="right"><input type="date" onblur="checkField(this);" name="date2" value="2019-09-01" required pattern="\d{1,2}/\d{1,2}/\d{4}" onchange="diffDates();" /><p class ="checkfield" id="date2"></p></span>
+				  </p> <!-- nouvelle Ligne incluant le type Date: Label et Value !-->
+				  <p>
+					<span class="left"><label>Nombres de nuits </label></span>
+				    <span class="right"><input type="number" onblur="checkField(this);"name="nuits" placeholder="Nombres de nuits" READONLY /><p class ="checkfield" id="nuits"></p></span>
+				  </p>
+				  <p> <!-- nouvelle Ligne avec 2 zones label  + value  definit par une liste avec diff options !-->
+				    <span class="left"><label for="list">Type de chambre </label></span>
+					  <span class="right">
+						
+						<datalist id="list">
+					      <select  id="typechambre"   />
+					        <option value="single"></option>
+						    <option value="double"></option>
+						    <option value="appartement"></option>
+						    <option value="suite"></option>
+					      </select>
+					    </datalist>
+						<input id="typech"  name="liste" list="list" placeholder="Type de chambre" onchange="updateNbrPers(this);"/><p class ="checkfield" id="liste"></p>
+					  </span>
+				  </p>
+
+				  <p> <!-- nouvelle Ligne pour definir 2 zones Label + choix de 4 radiobutton !-->
+				    <span class="left"><label> Nombres de personnes</label></span>
+					<span class="right">
+					<!--1 <input type="radio" required name="nombres_personnes" id="1" onclick="return CheckNbrPersonne(this);"  />!-->
+					 1 <input type="radio" required name="nombres_personnes" id="1"   />
+					 2 <input type="radio" disabled name="nombres_personnes" id="2"   />
+					 3 <input type="radio" disabled name="nombres_personnes" id="3"   />
+					 4 <input type="radio" disabled name="nombres_personnes" id="4"   />
+					</span>
+				  <p> <!-- nouvelle Ligne pour definir 2 zones Label + choix nombre Petit dejeuner !-->
+				      <span class="left"><label>Nombre de petits-d&eacute;jeuners </label></span>
+				      <span class="right"><input type="number" min="0" onblur="checkField(this);" name="petispanejeuner" placeholder="Nombre de petits-d&eacute;jeuners" /><p class ="checkfield" id="petispanejeuner"></p></span>
+				  </p>
+
+				  <p> <!-- nouvelle Ligne pour definir 2 zones
+					<!-- nouvelle Ligne pour definir 2 zones Label + choix options !-->
+				      <span class="LeftOptions"><label>Options </label></span>
+			              <span class="right">
+						     <span class="RightOptions">
+							    <br>TV&nbsp <input          type="checkbox" name="TV" ></br>
+								<br>Minibar <input          type="checkbox" name="BAR" ></br>
+								<br>Balcon vue mer <input   type="checkbox" name="BALCON" ></br>
+								<br>place de parking <input type="checkbox" name="PARKING" ></br>
+						     </span>
+						   </span>
+					  </span>
+				  </p>
+				  <p> <!-- nouvelle Ligne pour definir 2 zones pour les bouton envoyer/annuler !-->
+				    <span class="left"><input  type="reset" onclick="Reset();"value="annuler" /></span>
+				    <span class="right"><input type="submit" value="envoyer" onclick="ValidateForm(this)"/></span>
+				  </p>
+
+			       <!-- paragrapphe comme footer !-->
+				  <!-- <p class="footer">&copy;&nbsp;IUT-R&amp;T</p> -->
+
+			</div>
+
+		</fieldset>
+		</form>
+	</section>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+      <meta charset= "utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale-1">
+      <script src="javascriptdate.js" type="text/Javascript" ></script>
+      <link rel="stylesheet" href= "style2.css"> <!-- Pas encore de css !-->
+  </head>
+  <body>
+    <form name="form1">
+      
+        <legend> Calcul des jours a partir dates</legend>
+  
+    
+            <p> <!-- nouvelle zone pour disposer de 2 spans droite & gauche  pour texte  Label et Value + Conpol via Pattern !-->
+				    
+			  <span class="left"><label>Date arriv&eacute;e </label></span>
+			  <span class="right"><input type="date" ;" name="date1" value="2019-09-01" required pattern="\d{1,2}/\d{1,2}/\d{4}" /></span>
+			</p>
+				  <p> <!-- nouvelle zone pour disposer de 2 spans droite & gauche  pour texte et choix de date!-->
+				    <span class="left"><label>Date d&eacute;part </label></span>
+				    <span class="right"><input type="date" name="date2" value="2019-09-01" required pattern="\d{1,2}/\d{1,2}/\d{4}"  /></span>
+				  </p> <!-- nouvelle Ligne incluant le type Date: Label et Value !-->
+				  <p>
+					<span class="left"><label>Nombres de nuits </label></span>
+				    <span class="right"><input type="number" name="nuits" placeholder="Nombres de nuits" READONLY /></span>
+				  </p>
+			<!-- on utilise le type button et on appelle qd on click !-->
+			<span>
+            <input type="button" value="calculer" onclick="Calculer(form1)"/>
+            <input type="button" value="Annuler" onclick="Reset(form1)"/>
+            </span>
+   
+     
+    </form>
+  </body>
+  </html>

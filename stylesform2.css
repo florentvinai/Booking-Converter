@@ -1,0 +1,384 @@
+/*  -----------------------------------------------------*/
+/*-- Florent VINAI IUT 2eme Annee Gr 3-------------------*/
+/*-- S3 M2105 - Web Dev Dynamique -----------------------*/
+/*-- Année 2019/2020  -----------------------------------*/
+/*---TP1  Feuille formulaire pour -----------------------*/
+/*
+/* 1er partie : Fichier de Style qui s'applique par defaut :
+/* On definit toutes les proprietes de la structure HTML
+/* Defini dans le fichier reservations.html
+/*
+/* 2er partie : Fichier de Style qui s'applique par type d'ecran 
+/* Type de media screen en px
+/* Le fichier de style permet d'avoir une page web adapattive/responsive
+/*  -----------------------------------------------------*/
+
+
+/* Styles qui s'appliquent a tous les ecrans par defauts */
+  body {
+    box-sizing: border-box;
+  }
+
+
+/* Propriete par defaut de la grille d'affichage*/
+
+  fieldset {
+  width: 95%;
+  background-color:  white;
+
+}
+div.tableau {
+	margin-left: 0.06em;
+	margin-right: 0.06em;
+	padding: 0.125em;
+	width: 100%;
+	height: 56.6em;
+    background-color:  #D8D8D8;
+	overflow: auto;
+}
+
+
+/* tableau est la zone qui vaacceuillir les formes */
+
+.tableau span{
+  display: inline; 
+  float: left; 
+  border: 0.063em solid gray; 
+  margin: 0.063em;
+  padding: 0.36em;
+}
+
+.tableau p {
+  clear: left; text-align: right; margin: 0.0em;
+  padding: 0.0em; height: 0.063em;
+}
+/* style des span + Largeur relative de chacun des span dans lequel on aura les differents items */
+.tableau span.left {
+
+  width: 45%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  overflow: auto;
+}
+.tableau span.right {
+
+  width: 45%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  overflow: auto;
+}
+
+legend {
+  font-size: 2em;
+  text-shadow: 0.07em 0.07em 0.07em #003E79;
+}
+figure {
+  text-align: center;
+}
+img {
+  width: 7.813em;
+  height: auto;
+}
+
+/* Specific style pour l'espace gauche de type options */
+
+span.LeftOptions {
+  width: 45%;
+  height: 11.8em;
+  text-align: right ;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35 em;
+  border: 0.063em solid gray;
+
+  overflow: auto;
+
+
+}
+/* Specific style pour l'espace droit de type options */
+span.RightOptions {
+  width: 45%;
+  text-align: right;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.0em;
+  padding: 1em;
+  border: 0.063em solid #D8D8D8;
+  margin-left: 20%;
+
+
+}
+
+/* positionnement et style des autres elements specifiques */
+
+span.checkbox {
+  text-align: right;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+
+span.date1 {
+  text-align: center;
+  width: 10em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+span.date2 {
+  text-align: center;
+  width: 20em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+
+p.footer {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+
+  text-align: center;
+  width: 90%;
+  text-align: center;
+  border-color: #D8D8D8;
+
+}
+
+/* definition des style pour les boutons annuler /envoyer */
+
+span.annuler {
+  width: 50%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  text-align: center;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+span.annuler input[type=reset]{
+	background-color: white;
+	border: 2px solid blue;
+	padding: 5px;
+	color: blue;
+	transition: all 0.5s ease;
+}
+span.annuler input[type=reset]:hover{
+	background-color: blue;
+	color: white;
+}
+span.envoyer {
+  width: 50%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  overflow: auto;
+}
+span.envoyer input[type=submit]{
+	background-color: white;
+	border: 2px solid blue;
+	padding: 5px;
+	color: blue;
+	transition: all 0.5s ease;
+}
+span.envoyer input[type=submit]:hover{
+	background-color: blue;
+	color: white;
+}
+
+/*Definition des style pour les placeholder */
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: blue;
+		font-style: italic;
+		font-family: Tahoma;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    blue;
+   opacity:  1;
+	 font-style: italic;
+	 font-family: Tahoma;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    blue;
+   opacity:  1;
+	 font-style: italic;
+	 font-family: Tahoma;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    blue;
+	 font-style: italic;
+	 font-family: Tahoma;
+}
+
+
+
+/* --------------------------------------------------------------------*/
+/* la partie du fichier de style permet d'avoir une page web           */
+/* adapattive/responsive                                              -*/
+/* avec la definition des styles pour les ecrans basse resolutio       */
+/* on peut specifier un style partculier a un type taille/px d'ecran   */
+/* a l'aide des mediaqueries et des taille des screen    :             */
+/* dans le code ci dessous on applique le style lorsque 	     	   */
+/* width est inferieur a 849px 										   */
+/* qd la resolution se reduit 849px on applique le style ci dessous    */
+/* --------------------------------------------------------------------*/
+
+ @media screen and (min-width: 100px) and (max-width: 849px) {
+
+
+.tableau span{
+  display: inline; float: left; border: 0.063em solid #4286f4; margin: 0.063em;
+  padding: 0.188em;
+}
+.tableau p {
+  clear: left; text-align: right; margin: 0.0em;
+  padding: 0.0em; height: 0.063em;
+}
+
+/* On positionne la largeur des span pour le mobile */
+/* on peut specifier des largeur specifique et des tailles de fontes si besoin */
+ 
+.tableau span.left { width: 95%;}
+.tableau span.right { width: 95%;}
+
+
+
+legend {
+  font-size: 3em;
+  text-shadow: 0.07em 0.07em 0.07em #003E79;
+}
+figure {
+  text-align: center;
+}
+img {
+  width: 7.813em;
+  height: auto;
+}
+div.tableau {
+	margin-left: 0.06em;
+	margin-right: 0.06em;
+	padding: 0.125em;
+	width: 99%;
+	height: auto;
+    background-color:  #D8D8D8;
+	overflow: auto;
+}
+span.left {
+  width: 95%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  text-align: center;
+  padding: 0.35em;
+  border: 0.063em solid #9c9c9c;
+  overflow: auto;
+}
+span.right {
+  width: 95%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0em solid gray;
+  overflow: auto;
+}
+span.rightRadio {
+  width: 95%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0em solid gray;
+  overflow: auto;
+}
+span.LeftOptions {
+
+  height: auto;
+  text-align: center ;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 3 em;
+  border: 0.063em solid gray;
+  width: 96%;
+  font-size: 1.15em;
+
+  border: 0.063em solid #9c9c9c;
+  overflow: auto;
+
+}
+span.RightOptions {
+  width: 60%;
+  text-align: right;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border:0.0em solid gray;
+  margin-right: 0.5em;
+
+
+}
+
+
+span.checkbox {
+  text-align: right;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+
+span.date1 {
+  text-align: center;
+  width: 10em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+span.date2 {
+  text-align: center;
+  width: 20em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+
+p.footer {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+
+  text-align: center;
+  width: 95%;
+  text-align: center;
+  border-color: #D8D8D8;
+
+}
+
+/* definition des style specifiques  pour les boutons annuler /envoyer */
+/* on centre les boutons */
+
+span.annuler {
+  width: 95%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  text-align: center;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+
+span.envoyer {
+  width: 95%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  overflow: auto;
+}
+}

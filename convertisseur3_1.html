@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+      <meta charset= "utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale-1">
+      <script src="javascriptconversion3_1.js" type="text/Javascript" ></script>
+      <link rel="stylesheet" href= "Style2.css"> <!-- Pas encore de css !-->
+  </head>
+  <body>
+    <form name="form1">
+      
+        <legend> Convertisseur de devises</legend>			 
+
+<table> <!-- Creation d'une table Une entree par monnaie !-->
+  <thead>
+    <!-- ICI on lplace le Head partss !-->
+  </thead>
+  <tbody>
+    <tr> <!-- Here on place the 1ere Row: enregistrement= monaie YEN !-->
+      <td>
+	  <figure><img src="yen.png"  style='float:right; width:20px; line-height: 0.1em'></figure>
+	  <label style ='width: 20%; font-weight: 10' >Convertisseur en Yen </<label> </td>
+      <td>
+	  <input type="text" name="Yen" value="0" >
+	  </td>
+    </tr>
+	<tr> <!-- Here on place the 1ere Row: enregistrement= monaie DOLLAR !-->
+      <td>
+	  <figure><img src="dollar.png"  style='float:right; width:20px; line-height: 0.1em'></figure>
+	  <label style ='width: 20%; font-weight: 10' >Convertisseur en Dollar </<label> </td>
+      <td>
+	  <input type="text" name="Euro" value="0" >
+	  </td>
+    </tr>
+	<tr> <!-- Here on place the 1ere Row: enregistrement= monaie EURO !-->
+      <td>
+	  <figure><img src="Euro.png"  style='float:right; width:20px; line-height: 0.1em'></figure>
+	  <label style ='width: 20%; font-weight: 10' >Convertisseur en Euros </<label> </td>
+      <td>
+	  <input type="text" name="Dollar" value="0"  >
+	  </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><input type="button" value="Convertir" onclick="Convertir(form1)"/></td>
+      <td><input type="button" value="Annuler" onclick="Reset(form1)"/></td>
+    </tr>
+  </tfoot>
+</table>
+
+     
+    </form>
+  </body>
+  </html>

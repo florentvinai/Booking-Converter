@@ -1,0 +1,445 @@
+/*  -----------------------------------------------------*/
+/*-- Florent VINAI IUT 2eme Annee Gr 3-------------------*/
+/*-- S3 M2105 - Web Dev Dynamique -----------------------*/
+/*-- Année 2019/2020  -----------------------------------*/
+/*---TP1  Feuille formulaire pour -----------------------*/
+/*
+/* Fichier de Style qui s'applique par defaut :
+/* On definit toutes le sproprietes de la structure HTML
+/* Defini dans le fichier reservations.html
+/*  -----------------------------------------------------*/
+
+
+  /* Styles qui s'appliquent a tous les ecrans par defauts */
+  body {
+    box-sizing: border-box;
+  }
+
+
+ /* Propriete par defaut de la grille d'affichage*/
+
+  fieldset {
+  width: 95%;
+  background-color:  white;
+
+}
+div.tableau {
+	margin-left: 0.06em;
+	margin-right: 0.06em;
+	padding: 0.125em;
+	width: 100%;
+	height: 56.6em;
+    background-color:  #D8D8D8;
+	overflow: auto;
+}
+
+.tableau span{
+  display: inline; float: left; border: 0.063em solid gray; margin: 0.063em;
+  padding: 0.36em;
+}
+.tableau p {
+  clear: left; text-align: right; margin: 0.0em;
+  padding: 0.0em; height: 0.063em;
+}
+/* Largeur relative de chacun des span dans lequel on aura les differents items */
+.tableau span.left {
+
+  width: 45%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  overflow: auto;
+}
+.tableau span.right {
+
+  width: 45%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  overflow: auto;
+}
+
+
+p.main {
+  text-align: center;
+}
+
+legend {
+  font-size: 2em;
+  text-shadow: 0.07em 0.07em 0.07em #003E79;
+}
+figure {
+  text-align: center;
+}
+img {
+  width: 7.813em;
+  height: auto;
+}
+
+
+
+span.LeftOptions {
+  width: 45%;
+  height: 11.6em;
+  text-align: right ;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35 em;
+  border: 0.063em solid gray;
+
+  overflow: auto;
+
+
+}
+
+span.RightOptions {
+  width: 45%;
+  text-align: right;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.0em;
+  padding: 1em;
+  border: 0.063em solid #D8D8D8;
+  margin-left: 20%;
+
+
+}
+
+span.checkbox {
+  text-align: right;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+
+}
+/* positionnement et styme de la table option */
+table.options {
+    text-align: right;
+
+    background: #D8D8D8;
+    margin-left: 35%;
+    margin-right: auto;
+  }
+
+span.checkbox {
+  text-align: right;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+
+span.date1 {
+  text-align: center;
+  width: 10em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+span.date2 {
+  text-align: center;
+  width: 20em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+
+p.footer {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+
+  text-align: center;
+  width: 90%;
+  text-align: center;
+  border-color: #D8D8D8;
+
+}
+
+
+span.left.annuler  {
+  width: 50%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  text-align: center;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  border-radius: 5px 10px 0 5px;
+}
+span.left input[type=reset]{
+	background-color: #ffffff;
+	border: 2px solid #ff0015;
+
+	color: red;
+	transition: all 0.5s ease;
+  border-radius: 5px 10px 0 5px;
+}
+span.left input[type=reset]:hover{
+	background-color: red;
+	color: white;
+  border-radius: 5px 10px 0 5px;
+}
+span.right.envoyer {
+  width: 50%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  overflow: auto;
+  border-radius: 5px 10px 0 5px;
+}
+span.right input[type=submit]{
+	background-color: white;
+	border: 2px solid #ff0000;
+
+	color: red;
+	transition: all 0.5s ease;
+  border-radius: 5px 10px 0 5px;
+}
+span.right input[type=submit]:hover{
+	background-color: red;
+	color: white;
+  border-radius: 5px 10px 0 5px;
+}
+
+/* le champs quiaffiche le symbole*/
+ .checkfield {
+  font-size: 2.3em;
+  font-weight: bold;
+  color: green;
+  
+  top: -1em;
+  line-height: 0.5em;
+  position: relative;
+   
+  text-shadow: 1px 1px 10px green;
+} 
+
+
+/*Definition des style pour les placeholder */
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ff0000;
+		font-style: italic;
+		font-family: Tahoma;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ff0000;
+   opacity:  1;
+	 font-style: italic;
+	 font-family: Tahoma;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ff0000;
+   opacity:  1;
+	 font-style: italic;
+	 font-family: Tahoma;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #ff0000;
+	 font-style: italic;
+	 font-family: Tahoma;
+}
+
+div.cased .check {
+  display:none;
+  top: -0.8em;
+  line-height: 0.3em;
+  position: relative;
+  color: lime;
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 1px 1px 8px black;
+}
+
+
+/* definition des styles pour les ecran basse resolution */
+/* Des que la resolution se reduit 849 on applique le style ci dessous */
+
+ @media screen and (min-width: 100px) and (max-width: 849px) {
+
+
+.tableau span{
+  display: inline; float: left; border: 0.063em solid #4286f4; margin: 0.063em;
+  padding: 0.188em;
+}
+.tableau p {
+  clear: left; text-align: right; margin: 0.0em;
+  padding: 0.0em; height: 0.063em;
+}
+.tableau span.left { width: 95%;}
+.tableau span.right { width: 95%;}
+
+
+p.main {
+  text-align: center;
+}
+
+legend {
+  font-size: 3em;
+  text-shadow: 0.07em 0.07em 0.07em #003E79;
+}
+figure {
+  text-align: center;
+}
+img {
+  width: 7.813em;
+  height: auto;
+}
+div.tableau {
+	margin-left: 0.06em;
+	margin-right: 0.06em;
+	padding: 0.125em;
+	width: 99%;
+	height: auto;
+    background-color:  #D8D8D8;
+	overflow: auto;
+}
+span.left {
+  width: 95%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  text-align: center;
+  padding: 0.35em;
+  border: 0.063em solid #9c9c9c;
+  overflow: auto;
+}
+span.right {
+  width: 95%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0em solid gray;
+  overflow: auto;
+}
+span.LeftOptions {
+
+  height: auto;
+  text-align: center ;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 3 em;
+  border: 0.063em solid gray;
+  width: 96%;
+  font-size: 1.15em;
+
+  border: 0.063em solid #9c9c9c;
+  overflow: auto;
+
+}
+span.RightOptions {
+  width: 60%;
+  text-align: right;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border:0.0em solid gray;
+  margin-right: 0.5em;
+
+
+}
+
+span.checkbox {
+  text-align: right;
+  vertical-align: middle;
+  margin-right: 0.1em;
+}
+
+span.date1 {
+  text-align: center;
+  width: 10em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+span.date2 {
+  text-align: center;
+  width: 20em;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+}
+
+p.footer {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+
+  text-align: center;
+  width: 95%;
+  text-align: center;
+  border-color: #D8D8D8;
+
+}
+span.annuler {
+  width: 95%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  text-align: center;
+  padding: 0.35em;
+  border: 0.063em solid blue;
+  cursor: pointer;
+}
+
+span.envoyer {
+  width: 95%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 0.75em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  overflow: auto;
+  cursor: pointer;
+}
+/*span.annuler {
+  width: 50%;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  text-align: center;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  cursor: pointer;
+}
+span.right.envoyer {
+  width: 50%;
+  text-align: center;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 1.15em;
+  padding: 0.35em;
+  border: 0.063em solid gray;
+  overflow: auto;
+}
+*/
+span.left input[type=reset]{
+	background-color: #ffffff;
+	border: 2px solid #ff0015;
+
+	color: red;
+	transition: all 0.5s ease;
+}
+span.left input[type=reset]:hover{
+	background-color: red;
+	color: white;
+}
+
+span.right input[type=submit]{
+	background-color: white;
+	border: 2px solid #ff0000;
+
+	color: red;
+	transition: all 0.5s ease;
+}
+span.right input[type=submit]:hover{
+	background-color: red;
+	color: white;
+}
+
+
+}
